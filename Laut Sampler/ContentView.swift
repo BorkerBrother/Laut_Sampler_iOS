@@ -1,10 +1,4 @@
-//
-//  ContentView.swift
-//  Laut Sampler
-//
-//  Created by Borker on 20.11.23.
-//
-
+// Import necessary libraries
 import AudioKit
 import AudioKitEX
 import AudioKitUI
@@ -12,6 +6,7 @@ import AVFoundation
 import Combine
 import SwiftUI
 
+// Define the bundle for accessing samples
 public var sampleModuleBundle: Bundle = {
     #if SWIFT_PACKAGE
         return Bundle.module
@@ -26,6 +21,7 @@ struct DrumSample {
     var midiNote: Int
     var audioFile: AVAudioFile?
     var color =  UIColor.black
+    var isSelected = false
     
     init(name: String, fileName: String, midiNote: Int) {
         self.name = name
@@ -44,29 +40,29 @@ struct DrumSample {
     }
 }
 
-
-
-
+// Define a class to handle the drum conductor logic
 class DrumsConductor: ObservableObject, HasAudioEngine {
-    // Mark Published so View updates label on changes
+    // Published property to update the view on changes
     @Published private(set) var lastPlayed: String = "None"
 
+    // Audio engine and drum samples
     let engine = AudioEngine()
-
     var drumSamples: [DrumSample] =
         [
             DrumSample(name: "OPEN HI HAT", fileName: "Samples/open_hi_hat_A#1.wav", midiNote: 34),
             DrumSample(name: "HI TOM", fileName: "Samples/hi_tom_D2.wav", midiNote: 38),
             DrumSample(name: "MID TOM", fileName: "Samples/mid_tom_B1.wav", midiNote: 35),
             DrumSample(name: "LO TOM", fileName: "Samples/lo_tom_F1.wav", midiNote: 29),
-            DrumSample(name: "CLOSED HI HAT", fileName: "Samples/closed_hi_hat_F#1.wav", midiNote: 30), // Renamed from "HI HAT"
+            DrumSample(name: "CLOSED HI HAT", fileName: "Samples/closed_hi_hat_F#1.wav", midiNote: 30),
             DrumSample(name: "CLAP", fileName: "Samples/clap_D#1.wav", midiNote: 27),
             DrumSample(name: "SNARE", fileName: "Samples/snare_D1.wav", midiNote: 26),
             DrumSample(name: "KICK", fileName: "Samples/bass_drum_C1.wav", midiNote: 24),
         ]
 
+    // AppleSampler for playing the drum samples
     let drums = AppleSampler()
 
+    // Function to play a specific drum pad
     func playPad(padNumber: Int) {
         let midiNote = MIDINoteNumber(drumSamples[padNumber].midiNote)
         print("Playing Pad \(padNumber) with MIDI Note \(midiNote)")
@@ -75,6 +71,7 @@ class DrumsConductor: ObservableObject, HasAudioEngine {
         lastPlayed = fileName.components(separatedBy: "/").last!
     }
 
+    // Initializer to set up the audio engine and load audio files
     init() {
         engine.output = drums
         do {
@@ -82,13 +79,13 @@ class DrumsConductor: ObservableObject, HasAudioEngine {
                 $0.audioFile!
             }
             try drums.loadAudioFiles(files)
-
         } catch {
-            Log("Files Didn't Load")
+            print("Files Didn't Load")
         }
     }
 }
 
+/// Update PadsView
 struct PadsView: View {
     var conductor: DrumsConductor
 
@@ -103,7 +100,9 @@ struct PadsView: View {
                     ForEach(0 ..< 4, id: \.self) { column in
                         ZStack {
                             Rectangle()
-                                .fill(Color(conductor.drumSamples.map { downPads.contains(where: { $0 == row * 4 + column }) ? .gray : $0.color }[getPadId(row: row, column: column)]))
+                                .fill(Color(conductor.drumSamples.map {
+                                    downPads.contains(where: { $0 == row * 4 + column }) ? .gray : ($0.isSelected ? .blue : $0.color)
+                                }[getPadId(row: row, column: column)]))
                                 .cornerRadius(20)
                             Text(conductor.drumSamples.map { $0.name }[getPadId(row: row, column: column)])
                                 .foregroundColor(Color(.white)).fontWeight(.bold)
@@ -123,6 +122,7 @@ struct PadsView: View {
     }
 }
 
+// SwiftUI view for the main drums interface
 struct DrumsView: View {
     @StateObject var conductor = DrumsConductor()
     @State private var isPlaying = false
@@ -136,11 +136,13 @@ struct DrumsView: View {
 
     var body: some View {
         VStack(spacing: 1) {
+            // Display drum pads and buttons for controlling the sequence
             PadsView(conductor: conductor) { pad in
                 conductor.playPad(padNumber: pad)
             }
 
             HStack(spacing: 8) {
+                // Display buttons for each step in the sequence
                 ForEach(0 ..< 8, id: \.self) { buttonIndex in
                     Button(action: {
                         self.toggleStep(buttonIndex)
@@ -155,6 +157,7 @@ struct DrumsView: View {
                 }
             }
 
+            // Display a button for starting/stopping the sequence
             Button(action: {
                 self.togglePlay()
             }) {
@@ -166,29 +169,28 @@ struct DrumsView: View {
             }
         }
         .onAppear {
+            // Start the audio engine when the view appears
             self.conductor.start()
         }
         .onDisappear {
+            // Stop the audio engine and invalidate the timer when the view disappears
             self.conductor.stop()
             self.timer?.invalidate()
             self.timer = nil
         }
     }
 
+    // Function to toggle the state of a step in the sequence
     func toggleStep(_ step: Int) {
-        // Toggle the state of the button at the given step
         drumSequence[currentStep][step] = drumSequence[currentStep][step] == 0 ? 1 : 0
 
-        // Update the color of the corresponding pad based on the drum hit
         let isHit = drumSequence[currentStep][step] == 1
         let padColor: UIColor = isHit ? .red : .black
 
-        // Update the color of the drum pad
         let padNumber = step
         conductor.drumSamples[padNumber].color = padColor
         conductor.objectWillChange.send()
 
-        // If it's a hit, play the associated pad
         if isHit {
             let padNumber = step
             let sampleName = conductor.drumSamples[padNumber].name
@@ -197,9 +199,8 @@ struct DrumsView: View {
             conductor.playPad(padNumber: padNumber)
         }
     }
-    
 
-
+    // Function to toggle the play state of the sequence
     func togglePlay() {
         if isPlaying {
             stopSequence()
@@ -208,6 +209,7 @@ struct DrumsView: View {
         }
     }
 
+    // Function to start playing the sequence
     func startSequence() {
         currentStep = 0
         isPlaying = true
@@ -217,6 +219,7 @@ struct DrumsView: View {
         }
     }
 
+    // Function to play the current step in the sequence
     func playStep() {
         for (index, value) in drumSequence[currentStep].enumerated() {
             if value == 1 {
@@ -226,6 +229,7 @@ struct DrumsView: View {
         currentStep = (currentStep + 1) % drumSequence.count
     }
 
+    // Function to stop playing the sequence
     func stopSequence() {
         currentStep = 0
         isPlaying = false
@@ -234,7 +238,8 @@ struct DrumsView: View {
     }
 }
 
-
+// Function to get the pad ID based on row and column
 private func getPadId(row: Int, column: Int) -> Int {
     return (row * 4) + column
 }
+
