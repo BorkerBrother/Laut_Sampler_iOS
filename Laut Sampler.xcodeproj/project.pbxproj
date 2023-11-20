@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E33043612B0BC5A00045EF3B /* Laut_SamplerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33043602B0BC5A00045EF3B /* Laut_SamplerApp.swift */; };
+		E33043632B0BC5A00045EF3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33043622B0BC5A00045EF3B /* ContentView.swift */; };
+		E33043652B0BC5A10045EF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33043642B0BC5A10045EF3B /* Assets.xcassets */; };
+		E33043692B0BC5A10045EF3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33043682B0BC5A10045EF3B /* Preview Assets.xcassets */; };
+		E33043732B0BC5A10045EF3B /* Laut_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33043722B0BC5A10045EF3B /* Laut_SamplerTests.swift */; };
+		E330437D2B0BC5A10045EF3B /* Laut_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330437C2B0BC5A10045EF3B /* Laut_SamplerUITests.swift */; };
+		E330437F2B0BC5A10045EF3B /* Laut_SamplerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330437E2B0BC5A10045EF3B /* Laut_SamplerUITestsLaunchTests.swift */; };
+		E330438D2B0BCB770045EF3B /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = E330438C2B0BCB770045EF3B /* AudioKit */; };
+		E330438F2B0BDB3D0045EF3B /* Samples in Resources */ = {isa = PBXBuildFile; fileRef = E330438E2B0BDB3D0045EF3B /* Samples */; };
+		E382D65A2B0BE334005DDF4E /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = E382D6592B0BE334005DDF4E /* AudioKitEX */; };
+		E382D65D2B0BE349005DDF4E /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = E382D65C2B0BE349005DDF4E /* AudioKitUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E330436F2B0BC5A10045EF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E33043552B0BC5A00045EF3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E330435C2B0BC5A00045EF3B;
+			remoteInfo = "Laut Sampler";
+		};
+		E33043792B0BC5A10045EF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E33043552B0BC5A00045EF3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E330435C2B0BC5A00045EF3B;
+			remoteInfo = "Laut Sampler";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E330435D2B0BC5A00045EF3B /* Laut Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Laut Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E33043602B0BC5A00045EF3B /* Laut_SamplerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laut_SamplerApp.swift; sourceTree = "<group>"; };
+		E33043622B0BC5A00045EF3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E33043642B0BC5A10045EF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E33043662B0BC5A10045EF3B /* Laut_Sampler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Laut_Sampler.entitlements; sourceTree = "<group>"; };
+		E33043682B0BC5A10045EF3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E330436E2B0BC5A10045EF3B /* Laut SamplerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Laut SamplerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E33043722B0BC5A10045EF3B /* Laut_SamplerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laut_SamplerTests.swift; sourceTree = "<group>"; };
+		E33043782B0BC5A10045EF3B /* Laut SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Laut SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E330437C2B0BC5A10045EF3B /* Laut_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laut_SamplerUITests.swift; sourceTree = "<group>"; };
+		E330437E2B0BC5A10045EF3B /* Laut_SamplerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laut_SamplerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E330438E2B0BDB3D0045EF3B /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Samples; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E330435A2B0BC5A00045EF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E330438D2B0BCB770045EF3B /* AudioKit in Frameworks */,
+				E382D65D2B0BE349005DDF4E /* AudioKitUI in Frameworks */,
+				E382D65A2B0BE334005DDF4E /* AudioKitEX in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E330436B2B0BC5A10045EF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E33043752B0BC5A10045EF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E33043542B0BC5A00045EF3B = {
+			isa = PBXGroup;
+			children = (
+				E330435F2B0BC5A00045EF3B /* Laut Sampler */,
+				E33043712B0BC5A10045EF3B /* Laut SamplerTests */,
+				E330437B2B0BC5A10045EF3B /* Laut SamplerUITests */,
+				E330435E2B0BC5A00045EF3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E330435E2B0BC5A00045EF3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E330435D2B0BC5A00045EF3B /* Laut Sampler.app */,
+				E330436E2B0BC5A10045EF3B /* Laut SamplerTests.xctest */,
+				E33043782B0BC5A10045EF3B /* Laut SamplerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E330435F2B0BC5A00045EF3B /* Laut Sampler */ = {
+			isa = PBXGroup;
+			children = (
+				E330438E2B0BDB3D0045EF3B /* Samples */,
+				E33043602B0BC5A00045EF3B /* Laut_SamplerApp.swift */,
+				E33043622B0BC5A00045EF3B /* ContentView.swift */,
+				E33043642B0BC5A10045EF3B /* Assets.xcassets */,
+				E33043662B0BC5A10045EF3B /* Laut_Sampler.entitlements */,
+				E33043672B0BC5A10045EF3B /* Preview Content */,
+			);
+			path = "Laut Sampler";
+			sourceTree = "<group>";
+		};
+		E33043672B0BC5A10045EF3B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E33043682B0BC5A10045EF3B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E33043712B0BC5A10045EF3B /* Laut SamplerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E33043722B0BC5A10045EF3B /* Laut_SamplerTests.swift */,
+			);
+			path = "Laut SamplerTests";
+			sourceTree = "<group>";
+		};
+		E330437B2B0BC5A10045EF3B /* Laut SamplerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E330437C2B0BC5A10045EF3B /* Laut_SamplerUITests.swift */,
+				E330437E2B0BC5A10045EF3B /* Laut_SamplerUITestsLaunchTests.swift */,
+			);
+			path = "Laut SamplerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E330435C2B0BC5A00045EF3B /* Laut Sampler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E33043822B0BC5A10045EF3B /* Build configuration list for PBXNativeTarget "Laut Sampler" */;
+			buildPhases = (
+				E33043592B0BC5A00045EF3B /* Sources */,
+				E330435A2B0BC5A00045EF3B /* Frameworks */,
+				E330435B2B0BC5A00045EF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Laut Sampler";
+			packageProductDependencies = (
+				E330438C2B0BCB770045EF3B /* AudioKit */,
+				E382D6592B0BE334005DDF4E /* AudioKitEX */,
+				E382D65C2B0BE349005DDF4E /* AudioKitUI */,
+			);
+			productName = "Laut Sampler";
+			productReference = E330435D2B0BC5A00045EF3B /* Laut Sampler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E330436D2B0BC5A10045EF3B /* Laut SamplerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E33043852B0BC5A10045EF3B /* Build configuration list for PBXNativeTarget "Laut SamplerTests" */;
+			buildPhases = (
+				E330436A2B0BC5A10045EF3B /* Sources */,
+				E330436B2B0BC5A10045EF3B /* Frameworks */,
+				E330436C2B0BC5A10045EF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E33043702B0BC5A10045EF3B /* PBXTargetDependency */,
+			);
+			name = "Laut SamplerTests";
+			productName = "Laut SamplerTests";
+			productReference = E330436E2B0BC5A10045EF3B /* Laut SamplerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E33043772B0BC5A10045EF3B /* Laut SamplerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E33043882B0BC5A10045EF3B /* Build configuration list for PBXNativeTarget "Laut SamplerUITests" */;
+			buildPhases = (
+				E33043742B0BC5A10045EF3B /* Sources */,
+				E33043752B0BC5A10045EF3B /* Frameworks */,
+				E33043762B0BC5A10045EF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E330437A2B0BC5A10045EF3B /* PBXTargetDependency */,
+			);
+			name = "Laut SamplerUITests";
+			productName = "Laut SamplerUITests";
+			productReference = E33043782B0BC5A10045EF3B /* Laut SamplerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E33043552B0BC5A00045EF3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E330435C2B0BC5A00045EF3B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					E330436D2B0BC5A10045EF3B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = E330435C2B0BC5A00045EF3B;
+					};
+					E33043772B0BC5A10045EF3B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = E330435C2B0BC5A00045EF3B;
+					};
+				};
+			};
+			buildConfigurationList = E33043582B0BC5A00045EF3B /* Build configuration list for PBXProject "Laut Sampler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E33043542B0BC5A00045EF3B;
+			packageReferences = (
+				E330438B2B0BCB770045EF3B /* XCRemoteSwiftPackageReference "AudioKit" */,
+				E382D6582B0BE333005DDF4E /* XCRemoteSwiftPackageReference "AudioKitEX" */,
+				E382D65B2B0BE349005DDF4E /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+			);
+			productRefGroup = E330435E2B0BC5A00045EF3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E330435C2B0BC5A00045EF3B /* Laut Sampler */,
+				E330436D2B0BC5A10045EF3B /* Laut SamplerTests */,
+				E33043772B0BC5A10045EF3B /* Laut SamplerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E330435B2B0BC5A00045EF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E330438F2B0BDB3D0045EF3B /* Samples in Resources */,
+				E33043692B0BC5A10045EF3B /* Preview Assets.xcassets in Resources */,
+				E33043652B0BC5A10045EF3B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E330436C2B0BC5A10045EF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E33043762B0BC5A10045EF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E33043592B0BC5A00045EF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33043632B0BC5A00045EF3B /* ContentView.swift in Sources */,
+				E33043612B0BC5A00045EF3B /* Laut_SamplerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E330436A2B0BC5A10045EF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33043732B0BC5A10045EF3B /* Laut_SamplerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E33043742B0BC5A10045EF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E330437D2B0BC5A10045EF3B /* Laut_SamplerUITests.swift in Sources */,
+				E330437F2B0BC5A10045EF3B /* Laut_SamplerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E33043702B0BC5A10045EF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E330435C2B0BC5A00045EF3B /* Laut Sampler */;
+			targetProxy = E330436F2B0BC5A10045EF3B /* PBXContainerItemProxy */;
+		};
+		E330437A2B0BC5A10045EF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E330435C2B0BC5A00045EF3B /* Laut Sampler */;
+			targetProxy = E33043792B0BC5A10045EF3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E33043802B0BC5A10045EF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E33043812B0BC5A10045EF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E33043832B0BC5A10045EF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Laut Sampler/Laut_Sampler.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Laut Sampler/Preview Content\"";
+				DEVELOPMENT_TEAM = 7A4Y394B83;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "www.laut-samples.com.Laut-Sampler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E33043842B0BC5A10045EF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Laut Sampler/Laut_Sampler.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Laut Sampler/Preview Content\"";
+				DEVELOPMENT_TEAM = 7A4Y394B83;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "www.laut-samples.com.Laut-Sampler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E33043862B0BC5A10045EF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A4Y394B83;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "www.laut-samples.com.Laut-SamplerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Laut Sampler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Laut Sampler";
+			};
+			name = Debug;
+		};
+		E33043872B0BC5A10045EF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A4Y394B83;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "www.laut-samples.com.Laut-SamplerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Laut Sampler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Laut Sampler";
+			};
+			name = Release;
+		};
+		E33043892B0BC5A10045EF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A4Y394B83;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "www.laut-samples.com.Laut-SamplerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Laut Sampler";
+			};
+			name = Debug;
+		};
+		E330438A2B0BC5A10045EF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7A4Y394B83;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "www.laut-samples.com.Laut-SamplerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Laut Sampler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E33043582B0BC5A00045EF3B /* Build configuration list for PBXProject "Laut Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E33043802B0BC5A10045EF3B /* Debug */,
+				E33043812B0BC5A10045EF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E33043822B0BC5A10045EF3B /* Build configuration list for PBXNativeTarget "Laut Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E33043832B0BC5A10045EF3B /* Debug */,
+				E33043842B0BC5A10045EF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E33043852B0BC5A10045EF3B /* Build configuration list for PBXNativeTarget "Laut SamplerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E33043862B0BC5A10045EF3B /* Debug */,
+				E33043872B0BC5A10045EF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E33043882B0BC5A10045EF3B /* Build configuration list for PBXNativeTarget "Laut SamplerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E33043892B0BC5A10045EF3B /* Debug */,
+				E330438A2B0BC5A10045EF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E330438B2B0BCB770045EF3B /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.2;
+			};
+		};
+		E382D6582B0BE333005DDF4E /* XCRemoteSwiftPackageReference "AudioKitEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitEX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		E382D65B2B0BE349005DDF4E /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E330438C2B0BCB770045EF3B /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E330438B2B0BCB770045EF3B /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		E382D6592B0BE334005DDF4E /* AudioKitEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E382D6582B0BE333005DDF4E /* XCRemoteSwiftPackageReference "AudioKitEX" */;
+			productName = AudioKitEX;
+		};
+		E382D65C2B0BE349005DDF4E /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E382D65B2B0BE349005DDF4E /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E33043552B0BC5A00045EF3B /* Project object */;
+}
