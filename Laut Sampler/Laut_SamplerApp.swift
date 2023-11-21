@@ -11,7 +11,9 @@ import SwiftUI
 struct Laut_SamplerApp: App {
     var body: some Scene {
         WindowGroup {
-            DrumsView()
+            //DrumsView()
+            //Sequencer()
+            
         }
     }
 }

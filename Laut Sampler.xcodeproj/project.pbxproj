@@ -18,6 +18,8 @@
 		E330438F2B0BDB3D0045EF3B /* Samples in Resources */ = {isa = PBXBuildFile; fileRef = E330438E2B0BDB3D0045EF3B /* Samples */; };
 		E382D65A2B0BE334005DDF4E /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = E382D6592B0BE334005DDF4E /* AudioKitEX */; };
 		E382D65D2B0BE349005DDF4E /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = E382D65C2B0BE349005DDF4E /* AudioKitUI */; };
+		E382D65F2B0C1CE9005DDF4E /* Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E382D65E2B0C1CE9005DDF4E /* Sequencer.swift */; };
+		E3F04DF02B0CA49A00B9C091 /* Sampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F04DEF2B0CA49A00B9C091 /* Sampler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		E330437C2B0BC5A10045EF3B /* Laut_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laut_SamplerUITests.swift; sourceTree = "<group>"; };
 		E330437E2B0BC5A10045EF3B /* Laut_SamplerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laut_SamplerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E330438E2B0BDB3D0045EF3B /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Samples; sourceTree = "<group>"; };
+		E382D65E2B0C1CE9005DDF4E /* Sequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
+		E3F04DEF2B0CA49A00B9C091 /* Sampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sampler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,14 @@
 		E330435F2B0BC5A00045EF3B /* Laut Sampler */ = {
 			isa = PBXGroup;
 			children = (
+				E382D65E2B0C1CE9005DDF4E /* Sequencer.swift */,
 				E330438E2B0BDB3D0045EF3B /* Samples */,
 				E33043602B0BC5A00045EF3B /* Laut_SamplerApp.swift */,
 				E33043622B0BC5A00045EF3B /* ContentView.swift */,
 				E33043642B0BC5A10045EF3B /* Assets.xcassets */,
 				E33043662B0BC5A10045EF3B /* Laut_Sampler.entitlements */,
 				E33043672B0BC5A10045EF3B /* Preview Content */,
+				E3F04DEF2B0CA49A00B9C091 /* Sampler.swift */,
 			);
 			path = "Laut Sampler";
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F04DF02B0CA49A00B9C091 /* Sampler.swift in Sources */,
 				E33043632B0BC5A00045EF3B /* ContentView.swift in Sources */,
 				E33043612B0BC5A00045EF3B /* Laut_SamplerApp.swift in Sources */,
+				E382D65F2B0C1CE9005DDF4E /* Sequencer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
